@@ -1,0 +1,77 @@
+.search-form
+    padding: 20px 0
+
+.not-found
+    text-align: center
+    padding: 100px 20px
+    border-radius: 3px
+    box-shadow: 0 0 10px rgba(0,0,0,.2)
+
+.entry-title 
+    font-size: 24px
+    font-weight: bold 
+    color: color-one
+    text-transform: uppercase  
+    padding-bottom: 50px
+
+
+.main--container 
+    display: container
+    padding: 50px 15px
+
+.pagination
+    display: flex 
+    justify-content: center 
+    align-items: center 
+    flex-flow: row wrap 
+    margin: 100px 0
+
+    li 
+        padding: 5px
+
+    a:hover 
+        background: color-one 
+
+    a, span 
+        display: inline-block 
+        padding: 5px 10px 
+        background: color-two 
+        color: #fff
+        border-radius: 3px  
+
+        &.current 
+            background: color-one
+
+
+.std 
+    font-size: 14px
+    color: color-one 
+    ul 
+        padding-left: 30px 
+
+        + h3
+            margin-top: 20px 
+
+    li 
+        list-style: disc
+        + li 
+            margin-top: 10px 
+
+    h1, h2, h3, h4 
+        font-weight: medium 
+        padding: 10px 0
+
+    h1 
+        font-size: 28px
+    h2 
+        font-size: 24px 
+    h3 
+        font-size: 20px
+    h4 
+        font-size: 16px
+    
+.navigation.posts-navigation
+    padding: 50px 0
+
+@media (min-width: 992px)
+    font-size: 32px

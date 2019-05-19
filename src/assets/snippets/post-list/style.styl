@@ -1,0 +1,123 @@
+.post-list 
+    padding: 50px 0
+
+    &--blog
+        background-position: cover 
+        background-attachment: fixed
+
+        .slick-slide
+            margin: (gutter / 2)
+
+        .post-list
+            &__item
+                &--empty 
+                    display: none
+            &__title 
+                color: #fff
+                
+    &__container 
+        display: container
+
+    &__footer 
+        text-align: center 
+        padding: 50px 0
+
+    &__title 
+        display: block 
+        padding: 0 0 50px 
+        font-size: 24px
+        font-weight: bold 
+        text-transform: uppercase 
+        color: color-one
+        text-align: center
+
+    &__list[data-list=grid] 
+        display: flex 
+        justify-content: space-between
+        align-items: flex-start 
+        flex-flow: row wrap
+        margin: - (gutter / 2)
+
+    &__item 
+        flex: 1 1 345px
+        margin: (gutter/2)
+
+        &--empty 
+            padding: 0
+
+    &__border 
+        border-radius: 3px
+        padding: (gutter / 2)
+        background: #fff
+
+    &__name
+        display: block 
+        padding: 10px 0 
+        font-size: 14px 
+        font-weight: semi-bold 
+        color: color-one 
+        text-transform: uppercase
+
+    &__description 
+        font-size: 12px
+        font-weight: regular 
+        color: color-two
+
+    &__link
+        display: block
+        height: 350px 
+        img 
+            object-fit: cover 
+            width: 100%
+            height: 100% 
+
+    &--services 
+        background: rgba(color-three, .1)
+        text-align: center 
+
+    &--case 
+        pointer-events: none 
+
+[data-list=list]
+    margin: -(gutter / 2)
+
+@media (min-width: 992px)
+    .post-list 
+        &__title 
+            font-size: 32px
+        &__item
+            position: relative 
+            z-index: 1
+            border-radius: 3px 
+            transition: transition 
+
+            &:hover 
+                z-index: 2
+                box-shadow: 0 0 10px rgba(0,0,0,.2)
+
+    [data-list=list]
+        .post-list
+            &__border 
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin: 0
+                padding: 0
+
+            &__content, &__figure 
+                padding: 0
+                flex: 1 1 50%
+
+            &__content 
+                padding: (gutter/2)
+
+            &__item
+                margin: 0 (gutter/2)
+                &:hover 
+                    box-shadow: none 
+
+                &:nth-child(ODD)
+                    .post-list
+                        &__border 
+                            .post-list__content 
+                                order: -1

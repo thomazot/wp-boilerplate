@@ -1,0 +1,59 @@
+.contact
+    position: relative
+    padding: 50px 0
+    background: rgba(color-one, .2)
+    width: 100%
+    overflow: hidden
+
+    &__header, &__content 
+        margin: (gutter/2)
+
+    &__inner 
+        margin: -(gutter/2)
+
+    &__container 
+        display: container
+
+    &__content 
+        background: #fff
+        padding: (gutter/2)
+        border-radius: 4px
+
+    &__legend 
+        font-size: 14px
+        font-weight: bold 
+        text-transform: uppercase
+
+    &__title 
+        font-size: 24px
+        font-weight: bold 
+        text-transform: uppercase
+        color: color-two
+        padding-bottom: 20px
+
+    .wpcf7 label.on span:first-child
+        color: #000
+        
+@media (min-width: 500px)
+    .contact 
+        .inline 
+            display: flex 
+            margin: s('0 %s', -(gutter / 2))
+            > div 
+                flex: 1 1 auto
+                padding: 0 (gutter / 2)
+    
+@media (min-width: 992px)
+    .contact 
+        text-align: left
+
+        &__title
+            font-size: 24px
+
+        &__inner
+            display: flex 
+            align-items: center
+
+        textarea 
+            height: 94px
+        

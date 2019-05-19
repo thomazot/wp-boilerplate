@@ -1,0 +1,57 @@
+version: '2'
+services:
+    db:
+        container_name: wp-${NAME}-db
+        image: mysql:5.7
+        volumes:
+            - ./db_data:/var/lib/mysql
+        expose:
+            - 3306
+        networks:
+            - wordpress
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DB_PASS}
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_USER: ${DB_USER}
+            MYSQL_PASSWORD: ${DB_PASS}
+
+    wordpress:
+        depends_on:
+            - db
+        container_name: wp-${NAME}-wp
+        image: wordpress:latest
+        volumes:
+            - ./www:/var/www/html/wp-content
+        expose:
+            - 80
+        networks:
+            - wordpress
+            - nginx-proxy
+        environment:
+            VIRTUAL_HOST: ${VHOST}
+            WORDPRESS_DB_HOST: db:3306
+            WORDPRESS_DB_USER: root
+            WORDPRESS_DB_PASSWORD: ${DB_PASS}
+
+    pmd:
+        depends_on:
+            - db
+        container_name: wp-${NAME}-pmd
+        image: phpmyadmin/phpmyadmin
+        expose:
+            - 80
+        networks:
+            - wordpress
+            - nginx-proxy
+        environment:
+            VIRTUAL_HOST: pmd.${VHOST}
+            PMA_USERNAME: wordpress
+            PMA_PASSWORD: wordpress
+            PMA_HOSTS: db
+            PHP_MAX_INPUT_VARS: 10000
+
+networks:
+    wordpress:
+    nginx-proxy:
+        external:
+            name: ${PROXY}

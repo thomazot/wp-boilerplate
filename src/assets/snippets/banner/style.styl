@@ -1,0 +1,108 @@
+.banner 
+    width: 100%
+    overflow: hidden
+    .slick
+        &-arrow 
+            position: absolute 
+            top: 50% 
+            z-index: 10
+            transform: translateY(-50%)
+        &-prev 
+            left: 20px 
+        &-next 
+            right: 20px
+
+    &__item 
+        position: relative 
+        height: 175px
+
+        // &--video
+        //     pointer-events: none
+
+    &__link 
+        position: absolute 
+        top: 0 
+        left: 0 
+        z-index: 10
+        width: 100% 
+        height: 100%
+        background: rgba(color-one,0)
+
+        .banner__item--video & 
+            display: none 
+        
+    &__content 
+        display: none 
+        position: absolute 
+        top: 50% 
+        left: 50% 
+        z-index: 20
+        width: 100% 
+        transform: translateY(-50%) translateX(-50%)
+        color: color-one 
+        display: container 
+        text-shadow: 1px 1px 1px #fff
+        text-align: left
+        @media (min-width: 992px)
+            margin-top: -100px
+        
+    &__title 
+        display: block
+        font-size: 24px
+        font-weight: bold 
+        text-transform: uppercase 
+        text-shadow: 1px 1px 3px rgba(255,255,255,.2)
+        padding-bottom: 10px 
+        transform: translateX(100%)
+        opacity: 0
+
+        .banner__item--video & 
+            opacity: 0 
+            visibility:  hidden
+
+    &__description 
+        display: block
+        font-size: 16px
+        transform: translateX(-100%)
+        opacity: 0
+
+        .banner__item--video & 
+            opacity: 0 
+            visibility:  hidden
+
+    iframe 
+        display: block
+        width: 100% 
+        height: 100%
+
+    img 
+        width: 100% 
+        height: 100%
+        object-fit: cover
+
+
+.slick-active
+    .banner
+        &__title 
+            animation: bannerTitle 1s 1 ease 
+            transform: translateX(0)
+            opacity: 1
+
+        &__description
+            animation: bannerDescription 1.5s 1 ease 
+            transform: translateX(0)
+            opacity: 1
+    
+
+    .banner__item--video .banner__title
+        animation: bannerTitleVideo 5s 1 ease 
+
+    .banner__item--video .banner__description
+        animation: bannerDescriptionVideo 5s 1 ease 
+
+@media (min-width: 992px)
+    .banner 
+        &__item 
+            height: 645px
+        &__title 
+            font-size: 36px

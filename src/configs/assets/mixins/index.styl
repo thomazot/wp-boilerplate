@@ -1,0 +1,15 @@
+display(args...)
+    if(args == 'container')
+        width: 100%
+        max-width: viewport 
+        margin: 0 auto
+        padding: 0 (gutter / 2)
+    else 
+        display: args
+
+cursor(args...)
+    if(args == 'pointer' || args == 'hand')
+        cursor: pointer 
+        cursor: hand 
+    else 
+        cursor: args

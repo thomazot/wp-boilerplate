@@ -1,0 +1,27 @@
+.header 
+    position: sticky 
+    top: 0 
+    left: 0 
+    z-index: 200
+
+    background: #fff 
+
+    [data-scrolling=true] &
+        box-shadow: 0 1px 0 color-one, 0 0 10px rgba(0, 0, 0, .5)
+        
+
+    &__container 
+        display: container
+        display: flex 
+        justify-content: space-between
+        align-items: center
+        padding-top: 20px 
+        padding-bottom: 20px
+
+        transition: transition 
+
+        [data-scrolling=true] &
+            padding-top: 10px
+            padding-bottom: 10px
+
+@import 'menu.styl'

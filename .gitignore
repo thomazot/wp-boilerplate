@@ -1,0 +1,13 @@
+.DS_Store 
+node_modules
+.env
+.vscode 
+yarn.lock
+package-lock.json
+build/
+dist/
+db_data
+mu-plugins
+www/themes/twentynineteen
+www/themes/twentyseventeen
+www/themes/twentysixteen

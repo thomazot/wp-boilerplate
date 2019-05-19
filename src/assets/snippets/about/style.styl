@@ -1,0 +1,33 @@
+.about
+    margin: gutter 0
+    &__container 
+        display: container
+
+    &__title 
+        font-size: 32px
+        font-weight: bold 
+        text-transform: uppercase 
+        text-align: left 
+        color: color-one
+        margin: 20px 0
+
+    &__text
+        font-size: 14px
+        font-weight: regular 
+        color: color-two
+
+    &__inner 
+        margin: -(gutter/2)
+
+    &__figure, &__content 
+        padding: (gutter/2)
+
+@media (min-width: 992px)
+    .about
+        &__inner
+            display: flex 
+            
+        &__figure 
+            flex: 0 0 auto
+
+            

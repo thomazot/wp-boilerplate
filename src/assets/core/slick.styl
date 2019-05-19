@@ -1,0 +1,58 @@
+.slick-list, .slick-track 
+    min-width: 100%
+
+.slick-list
+    box-sizing: content-box
+    padding: (gutter / 2)
+    margin: -(gutter / 2)
+
+.slick-slider 
+    position: relative 
+    margin: 0 !important
+
+.slick-arrow 
+    position: absolute 
+    top: 50% 
+    z-index: 10
+    display: flex 
+    justify-content: center 
+    align-items: center
+    width: 45px
+    height: 45px 
+    padding: 0 
+    transform: translateY(-50%)
+
+.slick-prev 
+    left: 20px 
+
+.slick-next 
+    right: 20px
+
+.slick-dots
+    display: flex 
+    justify-content: center 
+    flex-flow: row wrap
+    width: 100%
+
+    button 
+        font-size: 0 
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        padding: 0
+
+        background: color-two
+        border: 0
+
+    li 
+        margin: 5px 
+
+        &.slick-active 
+            button 
+                background: color-one
+
+@media (min-width: (viewport + 130))
+    .slick-prev 
+        left: -55px
+    .slick-next
+        right: -55px

@@ -1,0 +1,45 @@
+.numbers 
+    background: color-one 
+    color: #fff 
+    padding: (gutter) 0
+
+    &__container 
+        display: container
+
+    &__header 
+        margin-bottom: 40px
+
+    &__title 
+        font-size: 32px
+        font-weight: bold
+        text-transform: uppercase 
+        text-align: center
+
+    &__item 
+        padding: (gutter/2)
+
+    &__label 
+        display: flex 
+        justify-content: center 
+        align-items: center
+        font-size: 46px
+        text-shadow: 1px 1px 3px rgba(0,0,0,.9)
+
+        span 
+            font-weight: bold
+            margin-left: 10px
+
+    &__description 
+        text-align: center
+        font-size: 14px
+        font-weight: regular 
+        text-transform: uppercase
+
+@media (min-width: 992px)
+    .numbers 
+        &__content 
+            display: flex 
+            justify-content: space-around
+            align-items: center
+
+        

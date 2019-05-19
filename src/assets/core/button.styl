@@ -1,0 +1,33 @@
+$button 
+    display: inline-block
+    cursor: pointer 
+    
+    border: solid 1px color-one
+    border-radius: 3px 
+    padding: 10px 20px
+
+    background: color-one 
+    color: #fff
+    font-size: 14px 
+    font-weight: semi-bold
+
+    transition: transition
+
+    &:hover 
+        border-color: color-two
+        background: color-two
+        color: #fff
+
+button 
+    @extends $button
+
+.button 
+    @extends $button
+
+    &--blank 
+        background: #fff
+        color: color-one 
+
+input
+    &[type=submit]
+        @extends $button
