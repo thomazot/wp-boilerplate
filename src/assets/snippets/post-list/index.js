@@ -31,5 +31,5 @@ define(['jquery', 'slick-carousel'], ($) => {
                 }
             ]
         });
-    })
+    });
 });
