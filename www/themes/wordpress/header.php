@@ -11,9 +11,10 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html amp <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<meta name="Description" content="<?php get_bloginfo( 'description', 'display' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
