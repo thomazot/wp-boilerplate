@@ -24,32 +24,6 @@
 	<meta name="theme-color" content="#ffa500">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
 
-    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );  ?>
-        <?php if($image[0] != "" ){ ?>
-            <meta property="og:image" content="<?php echo $image[0]; ?>"  >
-        <?php } else { ?>
-			<?php 
-				$custom_logo_id = get_theme_mod( 'custom_logo' );
-				if($custom_logo_id):
-				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );	
-			?>
-            <meta property="og:image" content="<?php echo logo; ?>"  >
-			<?php endif; ?>
-        <?php } ?>
-        <meta property="og:image:width" content="3523" >
-        <meta property="og:image:height" content="2372" >
-		<?php if ( is_front_page() && is_home() ): ?>
-			<meta property="og:url" content="/"  >
-			<meta property="og:title" content="<?php bloginfo( 'name' ); ?>"  >
-		<?php else: ?>
-			<meta property="og:url" content="<?php the_permalink(); ?>"  >
-			<meta property="og:title" content="<?php the_title(); ?>"  >
-		<?php endif;?>
-        <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
-        <meta property="og:description" content="<?php get_bloginfo( 'description', 'display' ); ?>" >
-    <?php endwhile; wp_reset_query(); ?>
-
     <link rel="profile" href="//gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
