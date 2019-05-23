@@ -11,3 +11,6 @@ mu-plugins
 www/themes/twentynineteen
 www/themes/twentyseventeen
 www/themes/twentysixteen
+www/plugins/akismet/
+www/cache/
+data
