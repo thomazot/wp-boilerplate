@@ -2,7 +2,7 @@ import './style.styl';
 
 define(['jquery', 'slick-carousel'], ($) => {
 
-    const carousel = $('.partners[data-carousel=true]');
+    const carousel = $('.partners[data-carousel=true]'); 
 
     carousel.each(function(){
         const item = $('.partners__list', this);
@@ -31,5 +31,5 @@ define(['jquery', 'slick-carousel'], ($) => {
                 }
             ]
         });
-    })
+    });
 });
