@@ -1,44 +1,45 @@
-.about
-    &__container
-        overflow: hidden
+@media (min-width: 992px)
+    .about
+        &__container
+            overflow: hidden
 
-    &__content, &__figure
-        transition: all 1s ease-in-out
-        opacity: 0
-        visibility: hidden
+        &__content, &__figure
+            transition: all 1s ease-in-out
+            opacity: 0
+            visibility: hidden
 
-        [data-animate=true] &
-            opacity: 1
-            visibility: visible
+            [data-animate=true] &
+                opacity: 1
+                visibility: visible
 
-    &__content
-        transform: translate3d(-100%, 0, 0)
+        &__content
+            transform: translate3d(-100%, 0, 0)
 
-        [data-animate=true] &
-            transform: translate3d(0, 0, 0)
+            [data-animate=true] &
+                transform: translate3d(0, 0, 0)
 
-    &__figure
-        transform: translate3d(100%, 0, 0)
+        &__figure
+            transform: translate3d(100%, 0, 0)
 
-        [data-animate=true] &
-            transform: translate3d(0, 0, 0)
+            [data-animate=true] &
+                transform: translate3d(0, 0, 0)
 
-.post-list
-    &__title, &__item
-        transition: all 1s ease-in-out
-        opacity: 0
-        visibility: hidden
+    .post-list
+        &__title, &__item
+            transition: all 1s ease-in-out
+            opacity: 0
+            visibility: hidden
 
-        [data-animate=true] &
-            opacity: 1
-            visibility: visible
+            [data-animate=true] &
+                opacity: 1
+                visibility: visible
 
-    &__item
-        transform: translate3d(0, 100%, 0)
+        &__item
+            transform: translate3d(0, 100%, 0)
 
-        [data-animate=true] &
-            transform: translate3d(0, 0, 0)
+            [data-animate=true] &
+                transform: translate3d(0, 0, 0)
 
-        for i in 2 .. 10
-            &:nth-child({i})
-                transition-duration: '1.%ss' % (100 * i)
+            for i in 2 .. 10
+                &:nth-child({i})
+                    transition-duration: '1.%ss' % (100 * i)
