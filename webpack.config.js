@@ -130,6 +130,7 @@ module.exports = (enve, argv) => {
             splitChunks: false,
             minimizer: [
                 new UglifyJsPlugin({
+                    extractComments: true,
                     cache: true,
                     parallel: true,
                     sourceMap: false,

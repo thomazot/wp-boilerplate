@@ -1,0 +1,42 @@
+/*!
+ * jQuery JavaScript Library v3.4.1
+ * https://jquery.com/
+ *
+ * Includes Sizzle.js
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2019-05-01T21:04Z
+ */
+
+/*!
+ * Sizzle CSS Selector Engine v2.3.4
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://js.foundation/
+ *
+ * Date: 2019-04-08
+ */
+
+/*!
+ * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+/*!
+ * ScrollMagic v2.0.6 (2018-10-08)
+ * The javascript library for magical scroll interactions.
+ * (c) 2018 Jan Paepke (@janpaepke)
+ * Project Website: http://scrollmagic.io
+ * 
+ * @version 2.0.6
+ * @license Dual licensed under MIT license and GPL.
+ * @author Jan Paepke - e-mail@janpaepke.de
+ *
+ * @file ScrollMagic main library.
+ */
