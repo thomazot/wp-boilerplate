@@ -8,6 +8,8 @@ module.exports = (enve, argv) => {
     const env = require('dotenv').config().parsed
     const CopyPlugin = require('copy-webpack-plugin')
 
+    console.log(env)
+
     // IN and OUT
     const config = {
         entry: {
