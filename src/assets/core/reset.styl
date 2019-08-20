@@ -1,18 +1,20 @@
 // ******************************************************************
-// Reset 
+// Reset
 // Author: Thomaz T. O. Toyama
-//
+// 
 // Stylesheet: Resets Default CSS
 // ******************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap')
+
 *
     box-sizing: border-box
+
     &:focus
         outline: none
 
 html, body
     width: 100%
     height: 100%
-
     margin: 0
     padding: 0
 
@@ -24,18 +26,17 @@ html
 body
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
-    display: flex 
+    display: flex
     flex-flow: column nowrap
 
-.wrapper 
+.wrapper
     flex: 1 1 auto
     min-height: 0
 
 #wpadminbar
     position: static
-    order: -1 
+    order: -1
     flex: 0 0 auto
-
 
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section
     margin: 0
@@ -58,7 +59,6 @@ caption, th, td
     text-align: left
     font-weight: normal
     float: none !important
-
 
 table, th, td
     vertical-align: middle
@@ -103,7 +103,6 @@ input, textarea, button, select
     background-color: color-two
 
 iframe
-
     &::-webkit-scrollbar
         width: 4px
         height: 4px
@@ -118,15 +117,14 @@ iframe
     background: color-one
     color: #fff
 
-a 
+a
     color: color-one
-    &:hover 
-        color: color-two
-        text-decoration: none 
 
+    &:hover
+        color: color-two
+        text-decoration: none
 
 @import 'button.styl'
 @import 'form.styl'
 @import 'wordpress.styl'
 @import 'slick.styl'
-
