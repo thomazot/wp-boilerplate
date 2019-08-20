@@ -7,6 +7,7 @@ module.exports = (enve, argv) => {
     const development = argv.mode
     const env = require('dotenv').config().parsed
     const CopyPlugin = require('copy-webpack-plugin')
+    const THEME = env.NAME || 'wordpress'
 
     // IN and OUT
     const config = {
@@ -14,10 +15,7 @@ module.exports = (enve, argv) => {
             app: './src/app.js',
         },
         output: {
-            path: path.resolve(
-                __dirname,
-                `./www/themes/${env.NAME || 'wordpress'}/assets`
-            ),
+            path: path.resolve(__dirname, `./www/themes/${THEME}/assets`),
             filename: '[name].js',
         },
     }
