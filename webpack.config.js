@@ -8,7 +8,7 @@ module.exports = (enve, argv) => {
     const env = require('dotenv').config().parsed
     const CopyPlugin = require('copy-webpack-plugin')
 
-    console.log(env)
+    if (!env) env = { NAME: 'wordpress' }
 
     // IN and OUT
     const config = {
