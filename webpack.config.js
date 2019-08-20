@@ -11,6 +11,7 @@ module.exports = (enve, argv) => {
 
     // IN and OUT
     const config = {
+        mode: development,
         entry: {
             app: './src/app.js',
         },
