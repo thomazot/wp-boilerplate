@@ -7,7 +7,7 @@ module.exports = (enve, argv) => {
     const development = argv.mode
     const env = require('dotenv').config().parsed
     const CopyPlugin = require('copy-webpack-plugin')
-    const THEME = typeof env.NAME === 'undefined' ? 'wordpress' : env.NAME
+    const THEME = 'wordpress' //typeof env.NAME === 'undefined' ? 'wordpress' : env.NAME
 
     // IN and OUT
     const config = {
