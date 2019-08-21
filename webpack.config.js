@@ -17,7 +17,9 @@ module.exports = (enve, argv) => {
         },
         output: {
             path: path.resolve(__dirname, `./www/themes/${THEME}/assets`),
-            filename: '[name].js',
+            filename: 'app.js',
+            chunkFilename: '[name].[hash].bundle.js',
+            publicPath: `/wp-content/themes/${THEME}/assets/`,
         },
     }
 
@@ -128,10 +130,21 @@ module.exports = (enve, argv) => {
     // Production
     if (development == 'production') {
         config.optimization = {
-            splitChunks: false,
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        chunks: 'initial',
+                        name: 'vendor',
+                        test: 'vendor',
+                        enforce: true,
+                    },
+                },
+            },
+            runtimeChunk: true,
+
             minimizer: [
                 new UglifyJsPlugin({
-                    extractComments: true,
+                    extractComments: 'all',
                     cache: true,
                     parallel: true,
                     sourceMap: false,
@@ -139,6 +152,14 @@ module.exports = (enve, argv) => {
                         compress: {
                             drop_console: true,
                         },
+                        warnings: false,
+                        parse: {},
+                        mangle: true, // Note `mangle.properties` is `false` by default.
+                        output: null,
+                        toplevel: false,
+                        nameCache: null,
+                        ie8: false,
+                        keep_fnames: false,
                     },
                 }),
                 new OptimizeCSSAssetsPlugin({}),
@@ -146,7 +167,17 @@ module.exports = (enve, argv) => {
         }
     } else {
         config.optimization = {
-            splitChunks: false,
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        chunks: 'initial',
+                        name: 'vendor',
+                        test: 'vendor',
+                        enforce: true,
+                    },
+                },
+            },
+            runtimeChunk: true,
         }
     }
 
