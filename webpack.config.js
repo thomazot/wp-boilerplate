@@ -130,8 +130,8 @@ module.exports = (enve, argv) => {
     // Production
     if (development == 'production') {
         config.optimization = {
-            splitChunks: true,
-            runtimeChunk: true,
+            splitChunks: false,
+
             minimizer: [
                 new UglifyJsPlugin({
                     extractComments: 'all',
@@ -157,8 +157,7 @@ module.exports = (enve, argv) => {
         }
     } else {
         config.optimization = {
-            splitChunks: true,
-            runtimeChunk: true,
+            splitChunks: false,
         }
     }
 
