@@ -32,6 +32,9 @@ services:
             WORDPRESS_DB_HOST: db:3306
             WORDPRESS_DB_USER: root
             WORDPRESS_DB_PASSWORD: ${DB_PASS}
+            LETSENCRYPT_HOST: ${VHOST}
+            LETSENCRYPT_EMAIL: contato@thomazot.com.br
+
 
     pmd:
         depends_on:
@@ -49,6 +52,8 @@ services:
             PMA_PASSWORD: wordpress
             PMA_HOSTS: db
             PHP_MAX_INPUT_VARS: 10000
+            LETSENCRYPT_HOST: pmd.${VHOST}
+            LETSENCRYPT_EMAIL: contato@thomazot.com.br
 
 networks:
     wordpress:
