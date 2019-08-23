@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''yarn
-yarn start'''
+        sh 'docker-compose up -d'
       }
     }
   }
