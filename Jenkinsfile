@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh '''cat <<EOF
+        sh '''echo <<EOF
 NAME=wordpress
 DB_DATABASE=wordpress
 DB_USER=wordpress
