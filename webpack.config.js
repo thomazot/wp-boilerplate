@@ -130,18 +130,8 @@ module.exports = (enve, argv) => {
     // Production
     if (development == 'production') {
         config.optimization = {
-            splitChunks: {
-                cacheGroups: {
-                    vendor: {
-                        chunks: 'initial',
-                        name: 'vendor',
-                        test: 'vendor',
-                        enforce: true,
-                    },
-                },
-            },
+            splitChunks: true,
             runtimeChunk: true,
-
             minimizer: [
                 new UglifyJsPlugin({
                     extractComments: 'all',
@@ -167,16 +157,7 @@ module.exports = (enve, argv) => {
         }
     } else {
         config.optimization = {
-            splitChunks: {
-                cacheGroups: {
-                    vendor: {
-                        chunks: 'initial',
-                        name: 'vendor',
-                        test: 'vendor',
-                        enforce: true,
-                    },
-                },
-            },
+            splitChunks: true,
             runtimeChunk: true,
         }
     }
